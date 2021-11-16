@@ -1,0 +1,29 @@
+<section id="content-acordeon" class="p-4">
+  <div id="box">
+    <h1 class="contacto">Contacto</h1>
+    <form action="" method="POST" id="form_contact">
+      <label class="form-label" for="name">Nombre</label>
+      <input class="form-control" type="text" name="name" data-validation="alphanumeric" />
+
+      <label class="form-label" for="surname">Apellidos</label>
+      <input class="form-control" type="text" name="surname" data-validation="alphanumeric" />
+
+      <label class="form-label" for="email">Email</label>
+      <input class="form-control" type="email" name="email" data-validation="email" />
+
+      <label class="form-label" for="sex">Sexo</label>
+      <select name="sex" class="form-select" data-validation="required">
+        <option value="men">Hombre</option>
+        <option value="woman">Mujer</option>
+      </select>
+
+      <label class="form-label" for="date">Fecha de nacimiendo</label>
+      <input class="form-control" type="text" name="date" data-validation="date" data-validation-format="dd-mm-yyyy" />
+
+      <label class="form-label" for="years">Edad</label>
+      <input class="form-control" type="number" name="years" data-validation="number" />
+
+      <input class="btn btn-primary" type="submit" value="Enviar" />
+    </form>
+  </div>
+</section>

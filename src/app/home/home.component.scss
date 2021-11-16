@@ -1,0 +1,11 @@
+#content {
+	font-family: Verdana, Arial;
+	margin-top: 1rem;
+	&-acordeon {
+		@extend #content;
+		width: 100%;
+		background-color: #e7e7e7;
+		padding: 1rem;
+		min-height: 104vh;
+	}
+}

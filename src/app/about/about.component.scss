@@ -1,0 +1,38 @@
+#content {
+	font-family: Verdana, Arial;
+	margin-top: 1rem;
+	&-acordeon {
+		@extend #content;
+		width: 100%;
+		background-color: #e7e7e7;
+		padding: 1rem;
+		min-height: 104vh;
+	}
+}
+
+#acordeon {
+	margin-top: 20px;
+	margin: 50px auto;
+	font-size: 1.2rem;
+	.ui-accordion-header {
+		background: #333333;
+		color: #e7e7e7;
+		font-weight: bold;
+		padding: 1rem;
+		border-radius: 7px;
+		cursor: pointer;
+		&:hover {
+			background: #272727;
+		}
+	}
+	.ui-accordion-content {
+		width: 100%;
+		background-color: #f3f3f3;
+		font-weight: bold;
+		font-style: italic;
+		color: rgb(53, 53, 53);
+		overflow: auto;
+		text-align: justify;
+		height: auto !important;
+	}
+}

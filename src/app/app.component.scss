@@ -1,0 +1,30 @@
+	
+
+#global {
+	width: 65%;
+	margin: 0px auto;
+	margin-top: 30px;
+	padding: 1.6rem;
+	background: #83a6d4d2;
+	box-shadow: 0px 0px 2px gray;
+	overflow: hidden;
+}
+
+.clearfix {
+	float: none;
+	clear: both;
+}
+
+#content {
+	width: 60%;
+	float: left;
+	font-family: Verdana, Arial;
+	margin-top: 1rem;
+	&-acordeon {
+		@extend #content;
+		width: 100%;
+		background-color: #e7e7e7;
+		padding: 1rem;
+		min-height: 104vh;
+	}
+}

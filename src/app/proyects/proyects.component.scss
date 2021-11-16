@@ -1,0 +1,52 @@
+.post {
+	padding: 2rem;
+	background: #a6c0c7f5;
+	margin-bottom: 2rem;
+	border-radius: 10px;
+	overflow: hidden;
+	h2 {
+		font-family: Helvetica, Arial;
+		font-size: 2rem;
+		color: #333;
+	}
+	.date {
+		display: block;
+		color: rgb(50, 58, 55);
+		margin-top: 5px;
+		padding: auto;
+		text-align: right;
+		font-style: italic;
+	}
+	p {
+		margin-top: 10px;
+		margin-bottom: 20px;
+		font-size: 1.2rem;
+		text-align: justify;
+	}
+}
+
+.button-more {
+	font-size: 1rem;
+	text-align: center;
+	float: right;
+	display: block;
+	padding: 15px;
+	background: #333333d7;
+	color: white;
+	text-decoration: none;
+	&:hover {
+		background: #272727;
+	}
+}
+
+#content {
+	font-family: Verdana, Arial;
+	margin-top: 1rem;
+	&-acordeon {
+		@extend #content;
+		width: 100%;
+		background-color: #e7e7e7;
+		padding: 1rem;
+		min-height: 104vh;
+	}
+}
