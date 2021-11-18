@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { HomeComponent } from './home/home.component';
-import { ProyectsComponent } from './proyects/proyects.component';
-import { ViewProyectComponent } from './view-proyect/view-proyect.component';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { CreateComponent } from './components/create/create.component';
+import { HomeComponent } from './components/home/home.component';
+import { ProyectsComponent } from './components/proyects/proyects.component';
+import { ViewProyectComponent } from './components/view-proyect/view-proyect.component';
+import { ErrorComponent } from './components/error/error.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,7 +14,8 @@ const routes: Routes = [
   //{ path: 'view-proyect', component: ViewProyectComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '**', component: HomeComponent },
+  { path: 'createproyect', component: CreateComponent },
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({

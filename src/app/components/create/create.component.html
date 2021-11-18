@@ -1,0 +1,57 @@
+<div id="content-acordeon">
+  <h2>{{ titulo }}</h2>
+  
+  <p *ngIf="state === 'success' || state === 'error'">
+    {{ state === 'success' ? "Se registro el proyecto" : "Error al registrar el proyecto" }}
+  </p>
+  <form #proyectoForm="ngForm" (ngSubmit)="onSubmit(proyectoForm)">
+    <p>
+      <label for="nombre" class="form-label">Nombre</label>
+      <input
+        type="text"
+        name="nombre"
+        #name="ngModel"
+        [(ngModel)]="proyecto.nombre"
+        class="form-control"
+      />
+    </p>
+
+    <p>
+      <label for="semestre" class="form-label">Semestre</label>
+      <textarea
+        name="semestre"
+        #semestre="ngModel"
+        [(ngModel)]="proyecto.semestre"
+        class="form-control"
+      ></textarea>
+    </p>
+
+    <p>
+      <label for="materia" class="form-label">Materia</label>
+      <input
+        type="text"
+        name="materia"
+        #materia="ngModel"
+        [(ngModel)]="proyecto.materia"
+        class="form-control"
+      />
+    </p>
+
+    <p>
+      <label for="anio" class="form-label">Año</label>
+      <input
+        type="number"
+        name="anio"
+        #anio="ngModel"
+        [(ngModel)]="proyecto.anio"
+        class="form-control"
+      />
+    </p>
+
+    <p>
+      <label for="image" class="form-label">Imagen</label>
+      <input type="file" name="imagen" class="form-control" />
+    </p>
+    <button type="submit" class="btn btn-primary w-100">Enviar</button>
+  </form>
+</div>
