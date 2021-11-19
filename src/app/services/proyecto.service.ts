@@ -31,4 +31,17 @@ export class ProyectoService {
 
     return this.http.get(this.url + 'proyectos', {headers: headers});
   }
+
+  getProyecto(id: string): Observable<any> {
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+    return this.http.get(this.url + 'proyecto/' + id, {headers: headers});
+  }
+
+  updateProyecto(proyecto: Proyecto): Observable<any> {
+    let params = JSON.stringify(proyecto);
+    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+    return this.http.patch(this.url + 'proyecto/' + proyecto._id, params, {headers: headers});
+  }
 }

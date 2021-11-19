@@ -1,10 +1,13 @@
 <section id="content">
   <div id="posts">
-    <article class="post" *ngFor="let post of posts">
-      <h2>{{ post.title }}</h2>
-      <span class="date">{{ post.date }}</span>
-      <p>{{ post.content }}</p>
-      <a href="#" class="button-more">Leer más</a>
+    <article class="post" *ngFor="let proyecto of proyectos">
+      <h2>{{proyecto.nombre}}</h2>
+      <div class="image">
+        <img src="{{ url+'get-image/' + proyecto.imagen }}" *ngIf="proyecto.imagen"/>
+      </div>
+      <span class="date">{{ proyecto.anio }}</span>
+      <p>{{ proyecto.semestre }}</p>
+      <a [routerLink]="['/proyecto', proyecto._id]" class="button-more">Ver más</a>
     </article>
   </div>
   <!-- Galeria -->
